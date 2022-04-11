@@ -2,7 +2,7 @@
   "name": "mcl",
   "version": "0.0.1",
   "description": "MCL Operator app",
-  "productName": "mcl",
+  "productName": "MCL-PWA",
   "author": "Jesús.T <jesus@imaxel.com>",
   "private": true,
   "scripts": {

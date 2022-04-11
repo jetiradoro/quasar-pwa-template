@@ -17,6 +17,7 @@ module.exports = configure(function (ctx) {
 
     htmlVariables: {
       version: '1.0.0',
+      APP_NAME: 'MCL-PWA',
     },
 
     // https://quasar.dev/quasar-cli/prefetch-feature
@@ -48,7 +49,7 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: "hash", // available values: 'hash', 'history'
       env: {
-        // API_HOST: process.env.API_HOST,
+        // APP_NAME: 'MCL-PWA-APPLICATION',
         // API_PORT: process.env.API_PORT,
         // DASHBOARD_URL: process.env.DASHBOARD_URL,
         // NODE_RED_MODULE: process.env.NODE_RED_MODULE,

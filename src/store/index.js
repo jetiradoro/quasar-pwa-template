@@ -2,6 +2,7 @@ import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 import counterStore from './counter'
 import globalStore from './global'
+import userStore from './user'
 
 
 /*
@@ -15,7 +16,8 @@ import globalStore from './global'
 const Store = createStore({
   modules: {
     counter: counterStore,
-    global: globalStore
+    global: globalStore,
+    user: userStore
   },
 
   // enable strict mode (adds overhead!)

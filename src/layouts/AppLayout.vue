@@ -143,6 +143,7 @@ export default defineComponent({
     ErrorModal,
     SuccessToast,
     ConfirmModal,
+    EssentialLink
   },
 
   setup() {

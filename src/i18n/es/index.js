@@ -7,6 +7,7 @@ export default {
 		variables: 'Variables',
 		logo: 'Logo',
 		dashboard: 'Dashboard',
+    login: 'Iniciar Sesión'
 	},
 	title: {
 		input_settings: 'Configuración de entrada',
