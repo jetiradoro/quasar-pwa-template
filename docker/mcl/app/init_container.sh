@@ -18,5 +18,5 @@ if [ "$DOCKER_ENV" == "dev" ]; then
         quasar dev pwa
 else
         quasar build -m pwa
-        quasar serve dist/pwa --history
+        quasar serve -p 443 dist/pwa --history
 fi
