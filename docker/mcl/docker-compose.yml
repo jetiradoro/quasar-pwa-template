@@ -12,6 +12,8 @@ services:
       - PGID=1000
       - PUID=1000
       - VIRTUAL_HOST=${DOCKER_DOMAIN}
+      - LETSENCRYPT_HOST=${DOCKER_DOMAIN}
+      - VIRTUAL_PORT=${DOCKER_PORT}
     volumes:
       - ../../:/app
       - ./app:/docker

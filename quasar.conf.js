@@ -90,9 +90,9 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       server: {
-        type: "http",
+        type: process.env.HTTP_PROTOCOL,
       },
-      port: 8080,
+      port: process.env.DOCKER_PORT,
       open: true, // opens browser window automatically
     },
 
@@ -159,8 +159,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `mcl`,
-        short_name: `mcl`,
+        name: `MCL`,
+        short_name: `MCL`,
         description: `MCL Operator app`,
         display: "standalone",
         orientation: "portrait",
@@ -168,12 +168,12 @@ module.exports = configure(function (ctx) {
         theme_color: "#027be3",
         icons: [
           {
-            src: "icons/icon-128x128.png",
+            src: "icons/android-icon-144x144.png",
             sizes: "128x128",
             type: "image/png",
           },
           {
-            src: "icons/icon-192x192.png",
+            src: "icons/android-icon-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },

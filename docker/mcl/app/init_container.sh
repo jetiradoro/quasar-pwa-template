@@ -15,8 +15,8 @@ fi
 # npm run build
 
 if [ "$DOCKER_ENV" == "dev" ]; then
-        quasar dev -p 80 pwa
+        quasar dev pwa
 else
         quasar build -m pwa
-        quasar serve -p 80 dist/pwa --history
+        quasar serve dist/pwa --history
 fi
