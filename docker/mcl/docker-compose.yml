@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  mcl-pwa:
+    build: app
+    image: ${DOCKER_APP_NAME}-app
+    restart: unless-stopped
+    container_name: ${DOCKER_APP_NAME}-app
+    env_file:
+      - .env
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - VIRTUAL_HOST=${DOCKER_DOMAIN}
+    volumes:
+      - ../../:/app
+      - ./app:/docker
+    networks:
+      docker-net:
+    entrypoint: /docker/init_container.sh
+
+networks:
+  docker-net:
+    driver: bridge
+    external: ${DOCKER_NET_EXTERNAL}
