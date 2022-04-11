@@ -1,11 +1,12 @@
 import {api} from 'boot/axios'
+import config from 'src/config'
 
 export const authUser = async (context) => {
   context.commit('global/setLoading', true, {root: true})
-  api.get('http://mcl.loc/api/v1/get-token', {
+  api.get(`${config.api_host}/get-token`, {
     auth: {
-      username: 'innovait@innovait.cat',
-      password: 'secret'
+      username: '',
+      password: ''
     }
   }).then(response => {
     context.commit('global/setLoading', false, {root: true})
@@ -27,7 +28,7 @@ export const authUser = async (context) => {
 
 export const getUser = async (context) => {
   context.commit('global/setLoading', true, {root: true})
-  api.get('http://mcl.loc/api/v1/user', {
+  api.get(`${config.api_host}/user`, {
     headers: { Authorization: `Bearer ${context.state.token}` }
   }).then(response => {
     context.commit('global/setLoading', false, {root: true})

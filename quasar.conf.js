@@ -49,7 +49,7 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: "hash", // available values: 'hash', 'history'
       env: {
-        // APP_NAME: 'MCL-PWA-APPLICATION',
+        API_HOST: process.env.API_BASE_URL,
         // API_PORT: process.env.API_PORT,
         // DASHBOARD_URL: process.env.DASHBOARD_URL,
         // NODE_RED_MODULE: process.env.NODE_RED_MODULE,
