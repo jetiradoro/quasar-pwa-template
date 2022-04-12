@@ -1,3 +1,4 @@
+import createPersistedState from 'vuex-persistedstate'
 import { store } from 'quasar/wrappers'
 import { createStore } from 'vuex'
 import counterStore from './counter'
@@ -19,6 +20,7 @@ const Store = createStore({
     global: globalStore,
     user: userStore
   },
+  plugins:[createPersistedState()],
 
   // enable strict mode (adds overhead!)
   // for dev mode and --debug builds only

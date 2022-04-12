@@ -6,10 +6,6 @@
         enter-active-class="animated flip"
         class="animated"
         @after-appear="endAnimation">
-        <!--				<img-->
-        <!--					style="width: 30%; height: 30%"-->
-        <!--					src="https://cdn.quasar.dev/logo-v2/svg/logo.svg" />-->
-
         <img
           :class="$q.screen.lt.sm ? 'size-mobile' : 'size-desktop'"
           src="logo.png" />
@@ -22,7 +18,7 @@
 import {defineComponent} from 'vue'
 import {useRouter} from 'vue-router'
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'Entry',
   setup() {
     const router = useRouter()
     return {

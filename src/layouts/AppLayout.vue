@@ -39,6 +39,7 @@
 <!--            {{ $t('messages.publish_settings') }}-->
 <!--          </q-tooltip>-->
 <!--        </q-btn>-->
+        <user-actions />
       </q-toolbar>
 
 <!--      <q-tabs align="left">-->
@@ -135,7 +136,7 @@ import ErrorModal from '../components/ErrorModal.vue'
 import ConfirmModal from '../components/ConfirmModal.vue'
 import SuccessToast from '../components/SuccessToast'
 import config from '../config'
-
+import UserActions from 'components/UserActions'
 export default defineComponent({
   name: 'AppLayout',
   components: {
@@ -143,7 +144,8 @@ export default defineComponent({
     ErrorModal,
     SuccessToast,
     ConfirmModal,
-    EssentialLink
+    EssentialLink,
+    UserActions
   },
 
   setup() {
@@ -158,7 +160,11 @@ export default defineComponent({
       quasar,
       showLoading: computed(() => store.getters['global/showLoading']),
       title: computed(() => store.getters['global/getTitle']),
+      user: computed(() => store.getters['user/getUserData']),
       config: computed(() => config),
+      options: [
+        'Logout'
+      ],
 
 
       goToHome() {

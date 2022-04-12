@@ -10,3 +10,9 @@ export const setToken= (state,token) => {
 export const setUser = (state,payload) => {
   state.attributes = payload
 }
+
+
+export const destroySession = (state) => {
+  state.token = null
+  state.attributes = null
+}

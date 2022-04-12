@@ -16,6 +16,7 @@ export default {
 		const I18n = useI18n()
 		return {
 			showLoading() {
+        // $q.loading.hide()
 				if (props.show) {
 					$q.loading.show({
 						message: I18n.t('messages.loading'),

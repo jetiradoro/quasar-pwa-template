@@ -1,4 +1,5 @@
 export default {
+  logout: 'Cerrar sesión',
 	menu: {
 		conn: 'Conexión',
 		input_settings: 'Input Settings',
@@ -27,6 +28,7 @@ export default {
 		publish_settings: 'Publicar configuracion',
 		change_logo: 'click para modificar el logo',
 		warn_action: 'Estas seguro ?',
+    error_server: "Error en el servidor durante el proceso",
 		remove_vars:
 			'Seguro de que quieres perder todos los cambios realizados ?',
 	},

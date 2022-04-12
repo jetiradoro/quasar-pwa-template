@@ -6,3 +6,8 @@ export const hideSuccessToast = async (context) => {
   }, 3000)
 }
 
+export const hideErrorToast = async (context) => {
+  setTimeout(() => {
+    context.commit('hideErrorToast')
+  }, 3000)
+}

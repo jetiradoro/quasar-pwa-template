@@ -31,10 +31,26 @@ export function showSuccess(state, payload) {
   }
 }
 
+export function showErrorToast(state, payload) {
+  state.error = {
+    show: true,
+    message: payload.message,
+  }
+}
+
 export function hideSuccess(state) {
   state.success = {
     show: false,
     message: '',
+  }
+}
+
+export function hideErrorToast(state) {
+  state.error = {
+    show: false,
+    title: '',
+    message: '',
+    errors: [],
   }
 }
 

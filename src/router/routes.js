@@ -1,19 +1,25 @@
+import {auth,guest} from 'src/middlewares/authMiddleware'
 const routes = [
   {
-    path: "/",
-    component: () => import("layouts/MainLayout.vue"),
-    // children: [{ path: "", component: () => import("pages/Index.vue") }],
+    path: '/login',
+    beforeEnter: guest,
+    component: () => import('pages/Login.vue'),
+    name: 'login',
   },
   {
+    path: "/",
+    beforeEnter: auth,
+    component: () => import("pages/EntryPage.vue"),
+    name: 'entry'
+  },
+
+  {
     path: '/app',
+    beforeEnter: auth,
     component: () => import('layouts/AppLayout.vue'),
     name: 'app',
     children:[
-      {
-        path:'login',
-        name:'login',
-        component : () => import("pages/Login.vue")
-      }
+
     ]
   },
 
