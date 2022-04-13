@@ -1,10 +1,8 @@
-import createPersistedState from 'vuex-persistedstate'
-import { store } from 'quasar/wrappers'
-import { createStore } from 'vuex'
-import counterStore from './counter'
-import globalStore from './global'
-import userStore from './user'
-
+import createPersistedState from "vuex-persistedstate";
+import { store } from "quasar/wrappers";
+import { createStore } from "vuex";
+import globalStore from "./global";
+import userStore from "../modules/user/store/user";
 
 /*
  * If not building with SSR mode, you can
@@ -16,19 +14,18 @@ import userStore from './user'
  */
 const Store = createStore({
   modules: {
-    counter: counterStore,
     global: globalStore,
-    user: userStore
+    user: userStore,
   },
-  plugins:[createPersistedState()],
+  plugins: [createPersistedState()],
 
   // enable strict mode (adds overhead!)
   // for dev mode and --debug builds only
   strict: process.env.DEBUGGING,
-})
+});
 
 export default store(function (/* { ssrContext } */) {
-  return Store
-})
+  return Store;
+});
 
-export {Store}
+export { Store };
